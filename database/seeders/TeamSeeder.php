@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Fase;
+use App\Models\Teams;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class FaseSeeder extends Seeder
+class TeamSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,9 @@ class FaseSeeder extends Seeder
      */
     public function run()
     {
-        Fase::create([
-            'name' => 'Leo',
-            'descripcion' => 'ssAsAS',
-            'categoria' => 'dadsasdsa',
-
+        Teams::create([
+            'name' => 'David',
+            'logo' => 'ssAsAS',
         ]);
     }
 }
