@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Fase;
+use App\Models\Fecha;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class FaseSeeder extends Seeder
+class FechaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,9 @@ class FaseSeeder extends Seeder
      */
     public function run()
     {
-        Fase::create([
-            'name' => 'Leo',
-            'descripcion' => 'ssAsAS',
-            'categoria' => 'dadsasdsa',
+        Fecha::create([
 
+            'fecha_partidos' => '2022-06-08 13:00:00',
         ]);
     }
 }

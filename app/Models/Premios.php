@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fase extends Model
+class Premios extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'name',
+        'nombre',
         'descripcion',
-        'categoria',
     ];
-
 }
+
