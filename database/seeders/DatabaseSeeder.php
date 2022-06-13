@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             Tipo_faseSeeder::class,
             FechaSeeder::class,
             PremioSeeder::class,
-            TorenoSeeder::class
+            //TorenoSeeder::class
         ]);
         
         
