@@ -13,19 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('jornadas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            
 
-            $table->foreignId('localidad_localidades_id')
+            $table->foreignId('fechas_fases_locales_id')
             ->nullable()
-            ->constrained('localidades')
+            ->constrained('fechas_fases')
             ->onDelete('cascade')
-            ->onUpdate('cascade');         
+            ->onUpdate('cascade');
 
-            $table->string('logo');
+            $table->foreignId('fechas_fases_visitantes_id')
+            ->nullable()
+            ->constrained('fechas_fases')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
             $table->timestamps();
+
         });
     }
 
@@ -36,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('jornadas');
     }
 };

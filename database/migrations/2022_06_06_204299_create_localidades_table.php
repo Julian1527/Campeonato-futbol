@@ -13,10 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('torneos', function (Blueprint $table) {
+        Schema::create('localidades', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->enum("tipo_Torneo", ['copa','liga']);
+
+            $table->foreignId('municipios_id')
+            ->nullable()
+            ->constrained()
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
             $table->timestamps();
         });
     }
@@ -28,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('torneos');
+        Schema::dropIfExists('localidades');
     }
 };

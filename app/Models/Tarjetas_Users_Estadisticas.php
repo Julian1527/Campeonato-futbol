@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fases extends Model
+class Tarjetas_Users_Estadisticas extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        
-        'teams_torneos_id',
-        'tipo_fases_id'
-        
-    ]; 
+    protected $fillable=[
+        'estadisticas_id',
+        'tarjetas_users_id'
+    ];
 }

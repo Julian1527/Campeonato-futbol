@@ -13,18 +13,23 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('tarjetas_users', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            
 
-            $table->foreignId('localidad_localidades_id')
+            $table->foreignId('tipo_tarjetas_id')
             ->nullable()
-            ->constrained('localidades')
+            ->constrained()
             ->onDelete('cascade')
-            ->onUpdate('cascade');         
+            ->onUpdate('cascade');
 
-            $table->string('logo');
+            $table->foreignId('users_id')
+            ->nullable()
+            ->constrained()
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
+            $table->dateTime('minuto_tarjeta');
+
             $table->timestamps();
         });
     }
@@ -36,6 +41,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('tarjetas_users');
     }
 };

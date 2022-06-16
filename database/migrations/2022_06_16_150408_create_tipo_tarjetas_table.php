@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('torneos', function (Blueprint $table) {
+        Schema::create('tipo_tarjetas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->enum("tipo_Torneo", ['copa','liga']);
+            $table->enum("tipo_tarjeta",['amarilla','roja']);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('torneos');
+        Schema::dropIfExists('tipo_tarjetas');
     }
 };

@@ -9,7 +9,9 @@ class User_Teams extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'Tipo_jugador',
+        'users_id',
+        'teams_id',
+        'tipo_jugador',
         
     ];
 }

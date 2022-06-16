@@ -13,10 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users_teams', function (Blueprint $table) {
+        Schema::create('goles_users', function (Blueprint $table) {
             $table->id();
 
             $table->foreignId('users_id')
+            ->nullable()
+            ->constrained()
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
+            $table->foreignId('partidos_id')
             ->nullable()
             ->constrained()
             ->onDelete('cascade')
@@ -28,9 +34,9 @@ return new class extends Migration
             ->onDelete('cascade')
             ->onUpdate('cascade');
 
-            $table->enum("tipo_jugador", ['capitan','dt','jugador']);
-            $table->timestamps();
+            $table->dateTime('minuto_gol');
 
+            $table->timestamps();
         });
     }
 
@@ -41,6 +47,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_teams');
+        Schema::dropIfExists('goles_users');
     }
 };

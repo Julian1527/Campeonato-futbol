@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Departamentos;
+use App\Models\Localidades;
 use App\Models\Premios;
 use App\Models\Teams;
 use App\Models\Tipo_fases;
@@ -26,6 +28,9 @@ class DatabaseSeeder extends Seeder
             Tipo_faseSeeder::class,
             FechaSeeder::class,
             PremioSeeder::class,
+            DepartamentoSeeder::class,
+            MunicipioSeeder::class,
+            LocalidadeSeeder::class
             //TorenoSeeder::class
         ]);
         

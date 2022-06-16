@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Teams;
+use App\Models\Departamentos;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class TeamSeeder extends Seeder
+class DepartamentoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,9 +15,10 @@ class TeamSeeder extends Seeder
      */
     public function run()
     {
-        Teams::create([
-            'nombre' => 'Maravilla21',
-            'logo' => 'ssAsAS',
-        ]);
+       Departamentos::create([
+
+        'nombre'=>'Huila',
+
+    ]);
     }
 }

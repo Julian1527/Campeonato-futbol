@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fases extends Model
+class Partidos extends Model
 {
     use HasFactory;
+
     protected $fillable = [
+        'jornadas_id',
+        'arbitros_users_id',
+        'localidades_id'
         
-        'teams_torneos_id',
-        'tipo_fases_id'
         
-    ]; 
+    ];
 }

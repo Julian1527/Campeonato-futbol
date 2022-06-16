@@ -13,18 +13,23 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('estadisticas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            
 
-            $table->foreignId('localidad_localidades_id')
+            $table->foreignId('teams_id')
             ->nullable()
-            ->constrained('localidades')
+            ->constrained()
             ->onDelete('cascade')
-            ->onUpdate('cascade');         
+            ->onUpdate('cascade');
 
-            $table->string('logo');
+            $table->foreignId('partidos_id')
+            ->nullable()
+            ->constrained()
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
+            $table->enum("resultado", ['gano','perdio','empato']);
+
             $table->timestamps();
         });
     }
@@ -36,6 +41,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('estadisticas');
     }
 };
