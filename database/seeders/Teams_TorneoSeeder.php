@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Torneos;
+use App\Models\Teams_Torneos;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class TorenoSeeder extends Seeder
+class Teams_TorneoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +15,10 @@ class TorenoSeeder extends Seeder
      */
     public function run()
     {
-       Torneos::create([
+       Teams_Torneos::create([
 
-        'nombre' => 'Pedro Peralta',
-        //'tipo' => 'copa'
+        'teams_id'=>1,
+        'torneos_id'=>1
 
        ]);
     }

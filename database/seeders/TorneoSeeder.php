@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Localidades;
+use App\Models\Torneos;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class LocalidadeSeeder extends Seeder
+class TorneoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +15,11 @@ class LocalidadeSeeder extends Seeder
      */
     public function run()
     {
-        Localidades::create([
+        Torneos::create([
 
-            'nombre'=>'Los cuchilleros',
-            'municipios_id'=>1
-        ]);
+            'nombre' => 'Torneo Truck',
+            'tipo_torneo' => 'copa'
+    
+           ]);
     }
 }

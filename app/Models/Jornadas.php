@@ -15,4 +15,10 @@ class Jornadas extends Model
         'fechas_fases_visitantes_id'
         
     ]; 
+    public function fecha_fases_locales(){
+        return $this->belongsTo(Fechas_Fases::class);
+    }
+    public function fecha_fases_visitantes(){
+        return $this->belongsTo(Fechas_Fases::class);
+    }
 }

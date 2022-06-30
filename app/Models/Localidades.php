@@ -13,4 +13,13 @@ class Localidades extends Model
         'nombre',
         'municipios_id'
     ];
+    public function municipios(){
+        return $this->belongsTo(Municipios::class);
+    }
+    public function partidos(){
+        return $this->hasMany(Partidos::class);
+    }
+    public function teams(){
+        return $this->hasMany(Teams::class);
+    }
 }

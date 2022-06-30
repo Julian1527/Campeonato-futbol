@@ -10,6 +10,13 @@ class Torneos extends Model
     use HasFactory;
     protected $fillable = [
         'nombre',
-        'tipo',
+        'tipo_torneo',
     ];
+    public function torneos_premios(){
+        return $this->hasMany(Torneos_Premios::class);
+    }
+    public function teams_torneos(){
+        return $this->hasMany(Teams_Torneos::class);
+    }
+
 }

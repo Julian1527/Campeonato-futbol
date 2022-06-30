@@ -44,4 +44,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    //Relación uno a muchos
+    public function users_teams(){
+        return $this->hasMany(User_Teams::class);
+    }
+    public function goles_users(){
+        return $this->hasMany(Goles_users::class);
+    }
+    public function partidos(){
+        return $this->hasMany(Partidos::class);
+    }
+    public function tarjetas_user(){
+        return $this->hasMany(Tarjetas_Users::class);
+    }
 }

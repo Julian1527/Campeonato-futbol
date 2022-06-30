@@ -12,4 +12,10 @@ class Tarjetas_Users_Estadisticas extends Model
         'estadisticas_id',
         'tarjetas_users_id'
     ];
+    public function estadisticas(){
+        return $this->belongsTo(Estadisticas::class);
+    }
+    public function tarjetas_users(){
+        return $this->belongsTo(Tarjetas_Users::class);
+    } 
 }

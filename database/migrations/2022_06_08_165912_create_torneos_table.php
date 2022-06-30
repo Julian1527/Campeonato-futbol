@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('torneos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->enum("tipo_Torneo", ['copa','liga']);
+            $table->enum("tipo_torneo", ['copa','liga']);
             $table->timestamps();
         });
     }

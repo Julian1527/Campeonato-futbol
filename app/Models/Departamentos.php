@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Departamentos extends Model
 {
     protected $fillable = [
-        'nombre',
-        
-        
+        'nombre', 
     ];
+    public function municipios(){
+        return $this->hasMany(Municipios::class);
+    }
+    
 }

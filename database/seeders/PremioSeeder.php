@@ -17,8 +17,8 @@ class PremioSeeder extends Seeder
     {
         Premios::create([
 
-            'nombre' => 'Tailor David',
-            'descripcion' => 'asdasdasd ad asdasdasda',
+            'nombre' => 'Vencedor del torneo',
+            'descripcion' => 'Vencio todos los equipos',
         ]);
     }
 }

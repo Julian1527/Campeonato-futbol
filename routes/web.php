@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CursoController;
+use App\Models\Municipios;
+use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +19,8 @@ use App\Http\Controllers\CursoController;
 
 
 
-Route::get('/', HomeCOntroller::class);
-
-Route::controller(CursoController::class)->group(function(){
-
-Route::get('cursos','index');
-Route::get('cursos/create','create');
-Route::get('cursos/{curso}','show');
-
-});
+Route::get('/', function () {
+    //dd(Municipios::all());
+    return view('welcome');
+    
+ });

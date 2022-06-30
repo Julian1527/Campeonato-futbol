@@ -8,10 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Municipios extends Model
 {
     use HasFactory;
+    
     protected $fillable = [
         'nombre',
         'departamentos_id'
-        
-        
+          
     ];
+    public function departamentos(){
+        return $this->belongsTo(Departamentos::class);
+    }
 }

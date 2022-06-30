@@ -9,8 +9,10 @@ use App\Models\Teams;
 use App\Models\Tipo_fases;
 use App\Models\Torneos;
 use App\Models\User;
+use App\Models\User_Teams;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Teams_Torneos;
 
 
 class DatabaseSeeder extends Seeder
@@ -24,14 +26,24 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
-            TeamSeeder::class,
-            Tipo_faseSeeder::class,
-            FechaSeeder::class,
-            PremioSeeder::class,
             DepartamentoSeeder::class,
             MunicipioSeeder::class,
-            LocalidadeSeeder::class
-            //TorenoSeeder::class
+            LocalidadeSeeder::class,
+            TeamSeeder::class,
+            User_TeamSeeder::class,
+            Tipo_faseSeeder::class,
+            FechaSeeder::class,
+            TorneoSeeder::class,
+            PremioSeeder::class,
+            Torneo_Premio_Seeder::class,
+            Teams_TorneoSeeder::class,
+            FaseSeeder::class,
+            Fecha_FaseSeeder::class,
+            
+
+
+            
+            
         ]);
         
         

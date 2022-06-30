@@ -17,7 +17,10 @@ class TeamSeeder extends Seeder
     {
         Teams::create([
             'nombre' => 'Maravilla21',
-            'logo' => 'ssAsAS',
+            'localidad_localidades_id'=>1,
+            'logo' => 'ssAsAS.aasd.aas'
+            
         ]);
+
     }
 }

@@ -13,4 +13,7 @@ class Tipo_fases extends Model
         'nombre',
         
     ];
+    public function fases(){
+        return $this->hasMany(Fases::class);
+    }
 }

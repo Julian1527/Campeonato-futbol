@@ -27,7 +27,7 @@ return new class extends Migration
             ->constrained()
             ->onDelete('cascade')
             ->onUpdate('cascade');
-
+            
             $table->enum("tipo_jugador", ['capitan','dt','jugador']);
             $table->timestamps();
 

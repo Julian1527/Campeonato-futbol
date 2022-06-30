@@ -13,4 +13,16 @@ class Teams extends Model
         'localidad_localidades_id',
         'logo'
     ];
+    public function users_teams(){
+        return $this->hasMany(User_Teams::class);
+    }
+    public function teams_torneos(){
+        return $this->hasMany(Teams_Torneos::class);
+    }
+    public function estadisticas(){
+        return $this->hasMany(Estadisticas::class);
+    }
+    public function localidades(){
+        return $this->belongsTo(Localidades::class);
+    }
 }

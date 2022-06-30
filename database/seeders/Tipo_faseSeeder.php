@@ -17,7 +17,7 @@ class Tipo_faseSeeder extends Seeder
     {
         Tipo_fases::create([
 
-            'nombre' => 'Juan pedro ',
+            'nombre' => 'Octavos',
 
         ]);
     }

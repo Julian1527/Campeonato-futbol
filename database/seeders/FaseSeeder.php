@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Localidades;
+use App\Models\Fases;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class LocalidadeSeeder extends Seeder
+class FaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +15,9 @@ class LocalidadeSeeder extends Seeder
      */
     public function run()
     {
-        Localidades::create([
-
-            'nombre'=>'Los cuchilleros',
-            'municipios_id'=>1
+        Fases::create([
+            'teams_torneos_id'=>1,
+            'tipo_fases_id'=>1
         ]);
     }
 }

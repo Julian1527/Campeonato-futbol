@@ -17,7 +17,9 @@ class MunicipioSeeder extends Seeder
     {
         Municipios::create([
 
-            'nombre'=>'Neiva'
+            'nombre'=>'Neiva',
+            'departamentos_id'=> 1
+
         ]);
     }
 }

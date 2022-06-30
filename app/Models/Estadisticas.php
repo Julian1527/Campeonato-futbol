@@ -14,4 +14,13 @@ class Estadisticas extends Model
         'resultado'
         
     ];
+    public function tarjetas_users_estadisticas(){
+        return $this->hasMany(Tarjetas_Users_Estadisticas::class);
+    }
+    public function partidos(){
+        return $this->belongsTo(Partidos::class);
+    }
+    public function teams(){
+        return $this->belongsTo(Teams::class);
+    } 
 }

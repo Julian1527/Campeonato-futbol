@@ -12,5 +12,8 @@ class Premios extends Model
         'nombre',
         'descripcion',
     ];
+    public function torneos_premios(){
+        return $this->hasMany(Torneos_Premios::class);
+    }
 }
 

@@ -12,4 +12,7 @@ class Tipo_Tarjetas extends Model
         'tipo_tarjeta'
 
     ];
+    public function torneos_premios(){
+        return $this->hasMany(Torneos_Premios::class);
+    }
 }

@@ -12,4 +12,7 @@ class Fecha extends Model
         'fecha_partidos',
         
     ];
+    public function fechas_fases(){
+        return $this->hasMany(Fechas_Fases::class);
+    }
 }
